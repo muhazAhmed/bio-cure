@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 910">
+  <g transform="
+          rotate(0 960 540) 
+          translate(-0 -0)
+          scale(1)
+        ">
+    <rect width="1920" height="910" fill="rgb(255, 255, 255)"></rect>
+    <g transform="translate(0, 0)">
+      <path fill="rgb(29, 118, 234)" fill-opacity="1" d="M0,1038.38L160,1003.061C320,967.741,640,897.103,960,734.462C1280,571.82,1600,317.177,1760,189.855L1920,62.534L1920,1080L1760,1080C1600,1080,1280,1080,960,1080C640,1080,320,1080,160,1080L0,1080Z"></path>
+    </g>
+  </g>
+</svg>
