@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: "BioCure",
@@ -17,6 +18,24 @@ export default function RootLayout({
       <body className="relative">
         <Navbar />
         {children}
+        <Toaster
+          position="top-right"
+          toastOptions={{
+            style: {
+              fontWeight: "bold",
+            },
+            success: {
+              style: {
+                color: "green",
+              },
+            },
+            error: {
+              style: {
+                color: "red",
+              },
+            }
+          }}
+        />
       </body>
     </html>
   );
