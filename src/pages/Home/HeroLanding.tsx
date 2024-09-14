@@ -5,15 +5,16 @@ import doctorSVg from "@/assets/doctor.png";
 import pillSVG from "@/assets/pill.png";
 import kitSVG from "@/assets/healthShield.png";
 import { motion } from "framer-motion";
+import Button from "../../components/Button";
 
 const HeroLanding = () => {
   return (
-    <div className="main-hero relative flex w-full h-[90vh] items-center justify-around flex-col lg:flex-row">
+    <div className="main-hero relative flex w-full h-auto lg:h-[90vh] xl:h-[90vh] items-center justify-around flex-col lg:flex-row">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 1, ease: "easeInOut" }}
-        className="absolute top-0 right-48"
+        className="absolute top-0 right-0 lg:right-48 xl:right-48"
       >
         <Image src={pillSVG} alt="pill-svg" width={100} priority={true} />
       </motion.div>
@@ -21,7 +22,7 @@ const HeroLanding = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 1, ease: "easeInOut" }}
-        className="absolute bottom-10"
+        className="absolute bottom-50 left-0 lg:bottom-10 xl:bottom-10"
       >
         <Image src={kitSVG} alt="kit-svg" width={100} priority={true} />
       </motion.div>
@@ -29,13 +30,13 @@ const HeroLanding = () => {
         <Image
           src={bgSVG}
           alt="Hero Background"
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{ objectFit: "cover" }}
           priority={true}
           className="absolute z-[-1]"
         />
       </div>
-      <div className="flex flex-col items-center lg:items-start gap-8 text-center lg:text-left p-6 lg:p-0">
+      <div className="z-10 flex flex-col items-center lg:items-start gap-8 text-center lg:text-left p-6 lg:p-0">
         <motion.h1
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -56,14 +57,15 @@ const HeroLanding = () => {
           <br /> that's our principle capital asset for our good future.
         </motion.p>
 
-        <motion.button
+        <Button
+          label="Book Appointment"
+          className="py-3 px-6 rounded-full shadow-2xl shadow-blue-300"
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
-          className="py-3 px-6 bg-csBlue text-white rounded-2xl shadow-2xl shadow-blue-300 cursor-pointer"
-        >
-          Book Appointment
-        </motion.button>
+          transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
+          whileHover={{ scale: 1.08 }}
+          href="/#"
+        />
       </div>
 
       <motion.div
