@@ -20,4 +20,35 @@ interface ButtonProps {
     iconStyles?: string
 }
 
-export type { ButtonProps }
+interface ModalProps {
+    children: React.ReactNode;
+    className?: string;
+    id?: any;
+    style?: React.CSSProperties
+}
+
+interface InputProps {
+    type?: "text" | "email" | "password" | "number";
+    name: string;
+    id?: string;
+    placeholder: string;
+    className?: string;
+    style?: React.CSSProperties
+    variant?: "primaryInp" | "plainInp" | "dangerInp"
+    value?: any
+    disabled?: boolean
+    loading?: boolean
+    Icon?: ReactElement
+    iconPosition?: "left" | "right"
+    iconStyles?: string
+    required?: boolean
+    onChange?: any
+    onBlur?: any
+    onFocus?: any
+    readonly?: boolean
+    min?: number
+    max?: number
+    autoComplete?: "on" | "off"
+}
+
+export type { ButtonProps, ModalProps, InputProps }
